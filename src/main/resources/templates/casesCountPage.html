@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>CASES COUNT</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+    width: 200px;
+    right:600px;
+    position: absolute;
+    top:50px;
+    bottom:100px;
+}
+</style>
+</head>
+<body>
+<table aria-colspan="2">
+    <tr>
+        <th>Total Number of Confirmed Cases:</th>
+        <td th:text="${casesCountObject.totalConfirmed}"/>
+    </tr>
+    <tr>
+        <th>Total Number of Discharged Cases:</th>
+        <td th:text="${casesCountObject.discharged}"/>
+    </tr>
+    <tr>
+        <th>Total Number of Deaths:</th>
+        <td th:text="${casesCountObject.deaths}"/>
+    </tr>
+    <tr>
+        <th>Mortality Rate:</th>
+        <td th:text="${casesCountObject.mortalityRate}"/>
+    </tr>
+
+</table>
+</body>
+</html>

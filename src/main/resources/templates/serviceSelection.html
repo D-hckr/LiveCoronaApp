@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<style>
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+table {
+    width: 200px;
+    right:600px;
+    position: absolute;
+    top:50px;
+    bottom:100px;
+}
+.btn-group{
+    width: 400px;
+    position: absolute;
+    right:450px;
+    top:150px;
+}
+h4{
+    position: absolute;
+    top:100px;
+    right:560px;
+}
+</style>
+
+<script>
+function casesCount() {
+ try { window.location.replace("http://localhost:8080/casesCount"); }
+    catch(e) { window.location = "http://localhost:8080/casesCount"; }
+
+}
+function hospitalAndBedEnquiry() {
+  location.replace('http://localhost:8080/hospitalAndBedEnquiry');
+}
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>Select the Service</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Your City/Neighbourhood:</th>
+        <td th:text="${cityName}"/>
+    </tr>
+    <tr>
+        <th>Your State:</th>
+        <td th:text="${stateName}"/>
+    </tr>
+</table>
+<form id="serviceRequested">
+<div class="btn-group">
+    <button type="button" onClick="return casesCount();"/>Cases Count
+    <button type="button" onClick="return hospitalAndBedEnquiry();"/>Hospital/Bed Enquiry
+</div>
+    <h4>Select the Service you want to Enquire!</h4>
+</form>
+</body>
+</html>

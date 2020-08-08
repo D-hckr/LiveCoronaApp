@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>HOSPITALS AVAILABILITY</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+    width: 200px;
+    right:600px;
+    position: absolute;
+    top:50px;
+    bottom:100px;
+}
+</style>
+</head>
+<body>
+<table aria-colspan="2">
+    <tr>
+        <th>Total Number of Covid-19 Hospitals:</th>
+        <td th:text="${hospitalDetails.totalHospitals}"/>
+    </tr>
+    <tr>
+        <th>Total Number of Urban Hospitals:</th>
+        <td th:text="${hospitalDetails.urbanHospitals}"/>
+    </tr>
+    <tr>
+        <th>Total Number of Rural Hospitals:</th>
+        <td th:text="${hospitalDetails.ruralHospitals}"/>
+    </tr>
+    <tr>
+        <th>Total Number of Beds Available:</th>
+        <td th:text="${hospitalDetails.totalBeds}"/>
+    </tr>
+
+</table>
+</body>
+</html>
