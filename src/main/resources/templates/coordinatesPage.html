@@ -18,7 +18,7 @@ function getLocation() {
 function showPosition(position) {
   var lat = position.coords.latitude;
   var lng = position.coords.longitude;
-  location.replace('http://localhost:8080/location?lat='+lat.toString()+'&lng='+lng.toString());
+  location.replace('https://covid19appliveupdates.herokuapp.com/location?lat='+lat.toString()+'&lng='+lng.toString());
 }
 </script>
 
