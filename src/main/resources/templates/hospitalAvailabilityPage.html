@@ -17,7 +17,7 @@ table {
 }
 .go-back{
     position: absolute;
-    top:250px;
+    top:230px;
     right:650px;
 }
 </style>
@@ -41,6 +41,7 @@ table {
         <td th:text="${hospitalDetails.totalBeds}"/>
     </tr>
 </table>
-<button class="go-back" onclick="history.back(-1)">Go Back</button>
+<!--<button class="go-back" onclick="history.back(-1)">Go Back</button>-->
+<a class="go-back" href="window.history.back();">Go Back</a>
 </body>
 </html>
