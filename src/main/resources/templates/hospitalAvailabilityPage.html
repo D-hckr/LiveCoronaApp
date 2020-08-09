@@ -21,11 +21,6 @@ table {
     right:650px;
 }
 </style>
-    <script>
-function goBack() {
-  window.history.back();
-}
-</script>
 </head>
 <body>
 <table aria-colspan="2">
@@ -46,6 +41,6 @@ function goBack() {
         <td th:text="${hospitalDetails.totalBeds}"/>
     </tr>
 </table>
-<button class="go-back" onclick="goBack()">Go Back</button>
+<button class="go-back" onclick="history.back()">Go Back</button>
 </body>
 </html>
