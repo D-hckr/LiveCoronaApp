@@ -22,8 +22,8 @@ table {
 }
 </style>
     <script>
-function goBack() {
-  location.replace("https://covid19appliveupdates.herokuapp.com/home");
+function goBack(URL) {
+    location.replace(URL);
 }
 </script>
 </head>
@@ -46,6 +46,6 @@ function goBack() {
         <td th:text="${casesCountObject.mortalityRate}"/>
     </tr>
 </table>
-<button class="go-back" onclick="goBack()">Go Back</button>
+<button class="go-back" onclick="goBack(${mainPage})">Go Back</button>
 </body>
 </html>

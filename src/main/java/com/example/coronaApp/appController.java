@@ -20,6 +20,7 @@ public class appController {
 
     public static String state;
     public static String city;
+    public static String url;
 
     @RequestMapping("/home")
     public ModelAndView get_Coordinates(){
@@ -30,7 +31,7 @@ public class appController {
 
     @GetMapping("/location")
     public ModelAndView getLocation(@RequestParam("lat") String lat,@RequestParam("lng") String lng){
-        String url = "https://locationiq.org/v1/reverse.php?key=d246984396eb01&lat="+lat+"&lon="+lng+"&format=json";
+        url = "https://locationiq.org/v1/reverse.php?key=d246984396eb01&lat="+lat+"&lon="+lng+"&format=json";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(url, String.class);
         JSONObject response = new JSONObject(result).getJSONObject("address");
@@ -51,6 +52,7 @@ public class appController {
         ModelAndView modelAndView = new ModelAndView();
         casesCount = casesCount.setCasesCountDetails(this.state);
         modelAndView.addObject("casesCountObject", casesCount);
+        modelAndView.addObject("mainPage", this.url);
         modelAndView.setViewName("casesCountPage.html");
         return modelAndView;
     }
@@ -60,6 +62,7 @@ public class appController {
         ModelAndView modelAndView = new ModelAndView();
         hospitalAvailability = hospitalAvailability.setHospitalAvailablityDetails(this.state);
         modelAndView.addObject("hospitalDetails", hospitalAvailability);
+        modelAndView.addObject("mainPage", this.url);
         modelAndView.setViewName("hospitalAvailabilityPage.html");
         return modelAndView;
     }
