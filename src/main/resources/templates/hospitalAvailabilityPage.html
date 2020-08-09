@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
     <title>HOSPITALS AVAILABILITY</title>
     <style>
 table, th, td {
@@ -18,7 +18,7 @@ table {
 .go-back{
     position: absolute;
     top:230px;
-    right:650px;
+    right:500px;
 }
 </style>
     <script>
@@ -47,6 +47,6 @@ table {
         <td th:text="${hospitalDetails.totalBeds}"/>
     </tr>
 </table>
-<a class="go-back" onclick="goBack()"><!-Click here to go back to the main Screen-!></a>
+<a class="go-back" onclick="goBack()"><---Click here to go back to the main Screen---></a>
 </body>
 </html>
