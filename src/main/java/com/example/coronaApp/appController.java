@@ -52,7 +52,6 @@ public class appController {
         ModelAndView modelAndView = new ModelAndView();
         casesCount = casesCount.setCasesCountDetails(this.state);
         modelAndView.addObject("casesCountObject", casesCount);
-        modelAndView.addObject("mainPage", this.url);
         modelAndView.setViewName("casesCountPage.html");
         return modelAndView;
     }
@@ -62,7 +61,6 @@ public class appController {
         ModelAndView modelAndView = new ModelAndView();
         hospitalAvailability = hospitalAvailability.setHospitalAvailablityDetails(this.state);
         modelAndView.addObject("hospitalDetails", hospitalAvailability);
-        modelAndView.addObject("mainPage", this.url);
         modelAndView.setViewName("hospitalAvailabilityPage.html");
         return modelAndView;
     }
