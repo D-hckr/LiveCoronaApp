@@ -64,4 +64,6 @@ public class appController {
         modelAndView.setViewName("hospitalAvailabilityPage.html");
         return modelAndView;
     }
+
+
 }

@@ -21,6 +21,12 @@ table {
     right:650px;
 }
 </style>
+    <script>
+        function goBack(){
+         try { window.location.replace("https://covid19appliveupdates.herokuapp.com/home"); }
+    catch(e) { window.location = "https://covid19appliveupdates.herokuapp.com/home"; }
+        }
+    </script>
 </head>
 <body>
 <table aria-colspan="2">
@@ -41,7 +47,6 @@ table {
         <td th:text="${casesCountObject.mortalityRate}"/>
     </tr>
 </table>
-<!--<button class="go-back" onclick="goBack(${mainPage})">Go Back</button>-->
-<a class="go-back" href="history.back();">Go Back</a>
+<a class="go-back" onclick="goBack()">Go to the main Screen</a>
 </body>
 </html>
