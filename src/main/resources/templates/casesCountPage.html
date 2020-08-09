@@ -15,7 +15,17 @@ table {
     top:50px;
     bottom:100px;
 }
+.go-back{
+    position: absolute;
+    top:200px;
+    right:650px;
+}
 </style>
+    <script>
+function goBack() {
+  window.history.back();
+}
+</script>
 </head>
 <body>
 <table aria-colspan="2">
@@ -35,7 +45,7 @@ table {
         <th>Mortality Rate:</th>
         <td th:text="${casesCountObject.mortalityRate}"/>
     </tr>
-
 </table>
+<button class="go-back" onclick="goBack()">Go Back</button>
 </body>
 </html>
